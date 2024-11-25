@@ -2,15 +2,14 @@ from reportlab.pdfgen import canvas
 from PyPDF2 import PdfReader, PdfWriter
 
 # Path to the PDF certificate template
-template_path = '/workspaces/certificate-workbook/files/BBC_Completion Certificate.pdf'
+template_path = '/workspaces/certificate-workbook/files/BKC_Completion Certificate.pdf'
 
 # List of student names
 student_names = [
-    "Ositadima Anene", "Oluwatishe Iwajomo", "Fikemi Ademo", "Omotola Ojomo",
-    "Teminioluwa Ekunboyejo", "Everest Mitchell", "Adeoba Fadare", "Teminireoluwa Osinowo",
-    "Beatrice Aimuemojie", "Jayden Adesua", "Sara Omar", "Stella Akusebo", "Mina Letibeb",
-    "King David Omotayo", "Gabriella Demissie", "Manal Omar", "Ayomikun Oladeji"
+"Amirah Yakubu"
 ]
+
+
 
 def create_certificate(template_path, student_name, output_path):
     # Create a canvas to draw text on
@@ -23,10 +22,10 @@ def create_certificate(template_path, student_name, output_path):
     # Adjust the position (x, y) based on your template
 
     # short names 
-    # c.drawString(300, 280, student_name)
+    c.drawString(300, 280, student_name)
 
-    #long names
-    c.drawString(230, 280, student_name)
+    # #long names
+    # c.drawString(180, 280, student_name)
 
     # Save the canvas as a temporary PDF
     c.save()
